@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
       createFrame(frameName, backLink);
     }
 
-    window.onpopstate = function(t) {
+    window.onhashchange = function(t) {
       trace(`Popped state!`);
       t.preventDefault();
       if (!isIos() && !!!t.state) {
